@@ -8,7 +8,9 @@ from keras.applications.imagenet_utils import preprocess_input
 
 
 #Load model
-model = tf.keras.models.load_model('vegetable_model_new.h5')
+model = tf.keras.models.load_model('vegetable_model_new.h5', compile=False)
+opt = keras.optimizers.Adam(lr=0.0001)
+model.compile(loss='sparse_categorical_crossentropy', optimizer=opt, metrics=['accuracy'])
 
 #label dictionary
 dict_ = {
