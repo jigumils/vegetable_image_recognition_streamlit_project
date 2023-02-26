@@ -58,7 +58,7 @@ def image_pred(img):
 
 #Display
 st.title("Vegetable Image Recognition App")
-uploaded_file = st.file_uploader("Unggah gambar yang ingin direkognisi! (bisa pakai yang ada di folder data_pred)")
+uploaded_file = st.file_uploader("Unggah gambar yang ingin direkognisi! (bisa pakai yang ada di folder data_pred repo github)")
 if uploaded_file != None:
     st.image(image_show(uploaded_file))
 
